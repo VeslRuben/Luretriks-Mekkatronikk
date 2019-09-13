@@ -1,11 +1,12 @@
 int analogPin = 3;
 int data = 0;
 void setup() {
-  Serial.begin(
+  Serial.begin(9600);
+  
 
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+ data = analogRead(analogPin);
+ Serial.println(data);
 }
