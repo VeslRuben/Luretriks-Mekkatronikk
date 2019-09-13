@@ -1,6 +1,3 @@
-import numpy as np
-import matplotlib.pyplot as plt
+import Comms
 
-n = np.array([1])
-
-plt.plot()
+Comms.test()
