@@ -9,7 +9,7 @@ class gui:
 
     def __init__(self):
         self.guiItem = vp.box(pos=vp.vector(0, 0, 0), size=vp.vector(20, 15, 1), color=color.magenta)
-        #vp.rate(100)
+        # vp.rate(100)
         self.xOrient = 0
         self.yOrient = 0
         self.zOrient = 0

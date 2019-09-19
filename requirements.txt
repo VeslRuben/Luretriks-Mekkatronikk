@@ -1,3 +1,4 @@
+vpython
 matplotlib
 numpy
 pyserial

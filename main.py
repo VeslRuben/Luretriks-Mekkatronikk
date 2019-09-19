@@ -2,8 +2,8 @@ from Gui import gui
 from Comms import comms
 
 gui = gui()
-#comm = comms()
+# comm = comms()
 
 while True:
-    #comm.getData()
+    # comm.getData()
     gui.run()

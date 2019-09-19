@@ -2,8 +2,6 @@ import numpy as np
 import serial
 
 
-
-
 class comms:
 
     def __init__(self):
@@ -20,14 +18,13 @@ class comms:
 
         good = False
 
-        while good == False:
+        while not good:
             try:
                 info = self.ser.readline()
                 info = info[0:len(info) - 2].decode()
                 good = True
             except UnicodeDecodeError:
                 print('Error')
-
 
     def splitData(self, info):
         data = info.split(" ")
@@ -54,10 +51,11 @@ class comms:
         x = self.movingAverage(self.xList, self.n)
         y = self.movingAverage(self.yList, self.n)
         z = self.movingAverage(self.zList, self.n)
-        #print('X: ' + str(x[0]))
-        #print('Y: ' + str(y[0]))
-        #print('Z: ' + str(z[0]))
+        # print('X: ' + str(x[0]))
+        # print('Y: ' + str(y[0]))
+        # print('Z: ' + str(z[0]))
         return x[0], y[0], z[0]
+
 
 def main():
     print()
