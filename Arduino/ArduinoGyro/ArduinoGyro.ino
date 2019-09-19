@@ -7,7 +7,7 @@ L3G gyro;
 
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(19200);
   Wire.begin();
   if (!gyro.init())
   {
@@ -20,11 +20,9 @@ void setup() {
 
 void loop() {
   gyro.read();
-  Serial.print("G ");
-  Serial.print("X");
   Serial.print((int)gyro.g.x);
-  Serial.print("Y");
+  Serial.print(" ");
   Serial.print((int)gyro.g.y);
-  Serial.print("Z");
+  Serial.print(" ");
   Serial.println((int)gyro.g.z);
 }
