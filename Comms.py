@@ -14,7 +14,7 @@ class comms:
         self.yList = [0] * self.n
         self.zList = [0] * self.n
 
-        self.ser = serial.Serial('COM8', 19200)
+        self.ser = serial.Serial('COM3', 19200)
 
         good = False
 
